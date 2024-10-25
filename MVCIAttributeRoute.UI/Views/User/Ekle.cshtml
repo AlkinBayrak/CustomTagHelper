@@ -1,0 +1,25 @@
+﻿@model User
+
+
+<form action="/Kullanici/Ekle" method="post">
+
+	<div class="form-floating">
+
+		<input asp-for="Name" type="text" class="form-control" id="floatingName" placeholder="Name">
+
+		<label for="floatingName">İsim</label>
+
+	</div>
+
+	<div class="form-floating mb-3">
+
+		<input asp-for="Email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+
+		<label for="floatingInput">Email</label>
+
+	</div>
+
+	<button asp-controller="Kullanici" asp-action="Ekle" asp-for="form-floating" class="btn btn-primary" type="submit">Ekle</button>
+
+</form>
+

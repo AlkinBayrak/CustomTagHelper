@@ -1,0 +1,20 @@
+﻿@{
+	var ogrenciler = ViewData["Ogrenciler"] as List<Ogrenci>;
+}
+<table>
+	<tr>
+		<th>Id</th>
+		<th>İsim</th>
+		<th>İşlemler</th>
+	</tr>
+	@foreach (var item in ogrenciler)
+	{
+		<tr>
+			<td>@item.Id</td>
+			<td>@item.Ad</td>
+			<td><a href="/ogrenci/detay/@item.Id">Detay</a></td>
+			<td><a href="/ogrenci/detay/@item.Id">Sil</a></td>
+		</tr>
+	}
+</table>
+<a href="/ogrenci/yeni">Yeni Öğrenci</a>
